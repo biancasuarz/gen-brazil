@@ -1,1 +1,39 @@
-
+programa {
+  funcao inicio() {
+    
+    inteiro vetor[10]
+    inteiro i, soma = 0, pares = 0
+    real media
+    
+    escreva("--------------------------------------\n")
+    para (i = 0; i < 10; i++) {
+      escreva("Digite o ", i + 1, "º número: ")
+      leia(vetor[i])
+    }
+    
+    escreva("\n--------------------------------------\n")
+    escreva("\nElementos nos índices ímpares:\n")
+    para (i = 1; i < 10; i += 2) {
+      escreva(vetor[i], " ")
+    }
+    
+    escreva("\n--------------------------------------\n")
+    escreva("\n\nElementos pares:\n")
+    para (i = 0; i < 10; i++) {
+      se (vetor[i] % 2 == 0) {
+        escreva(vetor[i], " ")
+      }
+    }
+    
+    para (i = 0; i < 10; i++) {
+      soma = soma + vetor[i]
+    }
+    
+    escreva("\n--------------------------------------\n")
+    escreva("\n\nSoma:\n", soma)
+    
+    media = soma / 10.0
+    escreva("\n\nMédia:\n", media)
+    escreva("\n--------------------------------------\n")
+  }
+}
